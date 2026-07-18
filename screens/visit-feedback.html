@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AURA — Visit Feedback</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/aura.css" />
+  <script src="../js/gate.js"></script>
+</head>
+<body>
+  <div class="banner"><strong>GATED VISION</strong> · Not Phase 1 · Synthetic · <a href="../index.html#autopilot" style="color:#daa291">Hub</a> · <a href="../VISION-AUTOPILOT.md" style="color:#daa291">Notes</a></div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo">AURA</div>
+        <div class="tag">Autopilot Vision · Gated</div>
+      </div>
+      <div class="profile">
+        <div class="avatar">AR</div>
+        <div>
+          <div class="name">Alex Rivera</div>
+          <div class="role">Field Agent</div>
+        </div>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Vision</p>
+          <a class="nav-link" href="aura-brain.html"><span class="ico">◈</span>Brain</a>
+          <a class="nav-link" href="field-agent.html"><span class="ico">◫</span>Field</a>
+          <a class="nav-link active" href="visit-feedback.html"><span class="ico">✎</span>Feedback</a>
+          <a class="nav-link" href="exception-inbox.html"><span class="ico">⚠</span>Exceptions</a>
+          <a class="nav-link" href="autopilot-timeline.html"><span class="ico">◷</span>Timeline</a>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Compare</p>
+        <a class="nav-link" href="agent-today.html"><span class="ico">←</span>Phase 1 Governed</a>
+        <a class="nav-link" href="../index.html"><span class="ico">⌂</span>Prototype Hub</a>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <h1>Visit Feedback</h1>
+          <p class="sub">Meera Shah · Unit 4B · Submit once — AURA creates the next action</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <span class="pill pill-accent">Vision lane</span>
+          <button class="icon-btn" type="button" aria-label="Notifications"><span>🔔</span></button>
+        </div>
+      </div>
+      
+      <div class="grid grid-13">
+        <div class="card feedback-form">
+          <div class="card-head">
+            <div><h2>Post-visit feedback to AURA</h2><div class="meta">Required evidence · not a silent checkbox</div></div>
+            <span class="pill pill-ok">Checked in</span>
+          </div>
+          <label>Units shown</label>
+          <div class="chip-row" id="units">
+            <button type="button" class="chip selected" data-chip>4B</button>
+            <button type="button" class="chip" data-chip>5A</button>
+            <button type="button" class="chip" data-chip>7C</button>
+          </div>
+          <label>Buyer reaction</label>
+          <select>
+            <option>Positive — interested</option>
+            <option>Neutral — needs time</option>
+            <option>Negative — unlikely</option>
+            <option>No-show</option>
+          </select>
+          <label>Objections heard</label>
+          <div class="chip-row">
+            <button type="button" class="chip selected" data-chip>Parking</button>
+            <button type="button" class="chip" data-chip>Price</button>
+            <button type="button" class="chip" data-chip>Floor</button>
+            <button type="button" class="chip" data-chip>Timeline</button>
+            <button type="button" class="chip" data-chip>None</button>
+          </div>
+          <label>Shortlisted units</label>
+          <input type="text" value="4B (primary), 5A (backup)" />
+          <label>Agent notes for AURA</label>
+          <textarea rows="4">Liked east view. Husband concerned about visitor parking. Asked about payment plan — directed to approved FAQ only.</textarea>
+          <div class="btn-row">
+            <button class="btn btn-primary" data-toast="Feedback received — AURA will set next action (prototype)">Submit to AURA</button>
+            <button class="btn btn-outline" data-toast="Saved draft feedback (prototype)">Save draft</button>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="card accent">
+            <div class="card-head"><div><h2>After you submit</h2><div class="meta">AURA owns next step</div></div></div>
+            <p style="margin:0;font-size:13px;line-height:1.55;opacity:.95">
+              AURA will update intent, recompute fit/readiness, draft or auto-schedule follow-up (policy permitting),
+              and only escalate if confidence, consent, or inventory blocks execution.
+            </p>
+            <div class="btn-row" style="margin-top:16px">
+              <a class="btn btn-white" href="aura-brain.html">Watch Brain console</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><h2>Capture checklist</h2></div></div>
+            <div class="list">
+              <div class="list-row"><div><div class="title">Participants</div><div class="desc">Meera + Rohan</div></div><span class="pill pill-ok">Set</span></div>
+              <div class="list-row"><div><div class="title">Attendance evidence</div><div class="desc">Check-in GPS / host confirm</div></div><span class="pill pill-ok">Set</span></div>
+              <div class="list-row"><div><div class="title">Next action</div><div class="desc">Created by AURA — not agent-chosen</div></div><span class="pill pill-accent">AURA</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        document.querySelectorAll("[data-chip]").forEach(function (el) {
+          el.addEventListener("click", function () { el.classList.toggle("selected"); });
+        });
+      </script>
+    
+    </main>
+  </div>
+  <nav class="mobile-nav"><a class="" href="aura-brain.html"><span>◈</span>Brain</a><a class="" href="field-agent.html"><span>◫</span>Field</a><a class="active" href="visit-feedback.html"><span>✎</span>Feedback</a><a class="" href="exception-inbox.html"><span>⚠</span>Exceptions</a><a class="" href="autopilot-timeline.html"><span>◷</span>Timeline</a></nav>
+  <script src="../js/app.js"></script>
+</body>
+</html>
