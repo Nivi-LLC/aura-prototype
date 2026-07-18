@@ -1,6 +1,6 @@
 # AURA Product Prototype (static HTML)
 
-Stakeholder / builder click-through demo for **AURA Phase 1 — Revenue Conversion OS**, plus a gated **Autopilot Vision** lane.
+Stakeholder / builder click-through demo for **AURA Phase 1 — Revenue Conversion OS**, plus gated vision lanes.
 
 - **Location:** outside the five AURA product repos (not platform code).
 - **Stack:** plain HTML + CSS + a tiny JS toast helper. No build step.
@@ -24,22 +24,23 @@ Live site: https://nivi-llc.github.io/aura-prototype/
 
 Publishes from the `main` branch root. Password: `9999`.
 
-## Two lanes
+## Three lanes
 
 | Lane | Intent |
 |---|---|
 | **A — Phase 1 Governed** | Human-approved outbound, Decision Cards, full role workspaces |
 | **B — Autopilot Vision** | AURA as revenue brain; agents only show site + feedback — **gated, not Phase 1** |
+| **C — Marketing Campaigns** | WhatsApp / Meta / FB / IG / calls / Way2News + funnel + AURA nurture — **not in blueprint** |
 
 See [VISION-AUTOPILOT.md](VISION-AUTOPILOT.md).
 
 ## Screens
 
-### Phase 1 Governed
+### Lane A — Phase 1 Governed
 
 | File | Role / intent |
 |---|---|
-| `index.html` | Hub + journey map + both lanes |
+| `index.html` | Hub + journey map + all lanes |
 | `screens/agent-today.html` | Sales Agent · primary Decision Card |
 | `screens/buyer-360.html` | Buyer understanding · fact vs observation |
 | `screens/whatsapp.html` | Agent-approved WhatsApp drafts |
@@ -51,23 +52,28 @@ See [VISION-AUTOPILOT.md](VISION-AUTOPILOT.md).
 | `screens/booking.html` | Terminal outcomes + readiness |
 | `screens/executive.html` | Executive Revenue Brief |
 
-### Autopilot Vision (gated)
+### Lane B — Autopilot Vision (gated)
 
 | File | Intent |
 |---|---|
 | `screens/aura-brain.html` | Overnight AURA actions + kill switch |
-| `screens/marketing-campaigns.html` | WhatsApp / Meta / FB / IG / calls / Way2News campaigns (**not in blueprint**) |
-| `screens/marketing-funnel.html` | Open → click → form → AURA handoff |
-| `screens/marketing-nurture.html` | AURA follow-up, visit schedule, advisory value/rental forecasts |
 | `screens/field-agent.html` | Field-only visit queue + brief |
 | `screens/visit-feedback.html` | Post-visit feedback → AURA next action |
 | `screens/exception-inbox.html` | Blocks AURA cannot clear alone |
 | `screens/autopilot-timeline.html` | Buyer journey with epistemic badges |
 
+### Lane C — Marketing Campaigns (not in blueprint)
+
+| File | Intent |
+|---|---|
+| `screens/marketing-campaigns.html` | WhatsApp / Meta / FB / IG / calls / Way2News campaigns |
+| `screens/marketing-funnel.html` | Open → click → form → AURA handoff |
+| `screens/marketing-nurture.html` | AURA follow-up, visit schedule, advisory value/rental forecasts |
+
 ## Important disclaimers
 
 1. **Synthetic data only** — fictional buyers/projects (e.g. Meera Shah, Greenfield Tower). No customer PII.
-2. **Not implementation scope** — platform M05 is Decision Card–narrow for Agent/Manager. Autopilot Vision is not a constitutional rewrite.
+2. **Not implementation scope** — platform M05 is Decision Card–narrow for Agent/Manager. Vision lanes are not a constitutional rewrite.
 3. **Not a CRM replacement** — decision + execution layer per blueprint non-goals.
 4. **Not an autonomous salesperson** — blueprint non-goal; vision keeps human authority and kill switches.
 
