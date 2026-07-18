@@ -56,6 +56,9 @@ See [VISION-AUTOPILOT.md](VISION-AUTOPILOT.md).
 | File | Intent |
 |---|---|
 | `screens/aura-brain.html` | Overnight AURA actions + kill switch |
+| `screens/marketing-campaigns.html` | WhatsApp / Meta / FB / IG / calls / Way2News campaigns (**not in blueprint**) |
+| `screens/marketing-funnel.html` | Open → click → form → AURA handoff |
+| `screens/marketing-nurture.html` | AURA follow-up, visit schedule, advisory value/rental forecasts |
 | `screens/field-agent.html` | Field-only visit queue + brief |
 | `screens/visit-feedback.html` | Post-visit feedback → AURA next action |
 | `screens/exception-inbox.html` | Blocks AURA cannot clear alone |

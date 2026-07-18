@@ -22,18 +22,39 @@ Realizing routine auto-send beyond Release 7 reminders would need a **future Dec
 | Actor | Owns |
 |---|---|
 | **AURA Brain** | Lead priority, buyer understanding, unit fit, conversation drafting / later low-risk send, visit propose + remind, readiness/opportunity advisory, learning *candidates* |
+| **Marketing Autopilot** *(vision only — not in Phase 1 blueprint)* | Campaigns on WhatsApp, Meta/FB/IG, calls/SMS, Way2News; track open/click/form; AURA nurture, visit schedule, advisory value/rental forecasts |
 | **Field agent** | Show the site; submit post-visit feedback |
-| **Still human** | Price/availability authority, knowledge approve/withdraw, booking/loss/cancel evidence, exception handling, kill switch |
+| **Still human** | Price/availability authority, knowledge approve/withdraw, booking/loss/cancel evidence, exception handling, kill switch, campaign budget/compliance |
 
 ## Screen → Decision Product map
 
 | Screen | Decision Products / contracts | Notes |
 |---|---|---|
 | `aura-brain.html` | DPT-0001…0008 overview | Overnight auto log + kill switch |
+| `marketing-campaigns.html` | *Not in blueprint* | Multi-channel campaign console |
+| `marketing-funnel.html` | *Not in blueprint* | Open → click → form → AURA |
+| `marketing-nurture.html` | Vision nurture + advisory forecasts | Value/rental bands labeled observation |
 | `field-agent.html` | DPT-0005 brief only | No pipeline / draft chrome |
 | `visit-feedback.html` | Site Visit Workflow | Agent input → AURA next action |
 | `exception-inbox.html` | Orchestrator blocks | Steward / manager, not every agent |
 | `autopilot-timeline.html` | Epistemic status | Fact vs observation vs auto vs field |
+
+## Marketing vision flow (extra lane)
+
+```text
+Ad (Meta / IG / WA / Way2News / Call)
+→ Link open
+→ CTA click
+→ Form details
+→ AURA consent check
+→ Nurture (WA / gated call)
+→ Explain fit + advisory appreciation / rental
+→ Schedule visit
+→ Field agent shows site
+→ Feedback → AURA next action
+```
+
+Forecasts of future property value and rental are **advisory observations** with limitations — never guarantees or invented inventory/legal claims.
 
 ## Release ladder (where Autopilot sits)
 
