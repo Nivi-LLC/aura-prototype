@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AURA — Messages</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/aura.css" />
+  <script src="../js/gate.js"></script>
+</head>
+<body>
+  <div class="banner"><strong>PROTOTYPE</strong> · Synthetic pilot data · <a href="../index.html" style="color:#daa291">All screens</a></div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo">AURA</div>
+        <div class="tag">Revenue OS · Phase 1</div>
+      </div>
+      <div class="profile">
+        <div class="avatar">AR</div>
+        <div>
+          <div class="name">Alex Rivera</div>
+          <div class="role">Sales Agent</div>
+        </div>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Menu</p>
+          <a class="nav-link" href="agent-today.html"><span class="ico">▦</span>Today</a>
+          <a class="nav-link" href="pipeline.html"><span class="ico">☰</span>Pipeline</a>
+          <a class="nav-link" href="buyer-360.html"><span class="ico">◎</span>Buyers</a>
+          <a class="nav-link active" href="whatsapp.html"><span class="ico">💬</span>Messages</a>
+          <a class="nav-link" href="visits.html"><span class="ico">◷</span>Visits</a>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Others</p>
+          <a class="nav-link" href="manager.html"><span class="ico">⚑</span>Manager</a>
+          <a class="nav-link" href="inventory.html"><span class="ico">▣</span>Inventory</a>
+          <a class="nav-link" href="knowledge.html"><span class="ico">◇</span>Knowledge</a>
+          <a class="nav-link" href="booking.html"><span class="ico">✓</span>Booking</a>
+          <a class="nav-link" href="executive.html"><span class="ico">◈</span>Executive</a>
+        <a class="nav-link" href="../index.html"><span class="ico">←</span>Prototype Hub</a>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <h1>Messages</h1>
+          <p class="sub">Agent-approved WhatsApp · DEC-0003 · No auto-send in prototype</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;flex:1;justify-content:flex-end;flex-wrap:wrap">
+          <label class="search"><input type="search" placeholder="Search conversations" /><span class="ico">⌕</span></label>
+          <button class="icon-btn" type="button" aria-label="Notifications"><span>🔔</span><span class="dot"></span></button>
+        </div>
+      </div>
+      
+      <div class="grid grid-13">
+        <div class="card">
+          <div class="card-head">
+            <div><h2>Meera Shah</h2><div class="meta">WhatsApp · Consent captured · Project Greenfield</div></div>
+            <span class="pill pill-ok">Channel active</span>
+          </div>
+          <div class="chat">
+            <div class="bubble in">Hi, we can visit tomorrow afternoon if 4B is still available?<div class="time">10:12 · Buyer</div></div>
+            <div class="bubble out">Thanks Meera — checking availability and sharing two slots.<div class="time">10:18 · Alex (sent)</div></div>
+            <div class="bubble in">2 PM works if my husband can join.<div class="time">12:04 · Buyer</div></div>
+          </div>
+          <div class="draft-panel">
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+              <span class="pill pill-accent">DPT-0003 Draft</span>
+              <span class="pill pill-warn">Approval required</span>
+              <span class="pill pill-ai">From approved knowledge K-118</span>
+            </div>
+            <p style="margin:0 0 12px;font-size:14px;line-height:1.45">
+              Hi Meera — Unit 4B is available as of this morning. I can hold a site visit tomorrow at 2:00 PM.
+              Reply YES to confirm, or suggest another time. — Alex, Greenfield Tower
+            </p>
+            <div class="btn-row">
+              <button class="btn btn-primary" data-toast="Message sent after agent approval (prototype)">Approve &amp; send</button>
+              <button class="btn btn-outline" data-toast="Draft opened for edit (prototype)">Modify</button>
+              <button class="btn btn-ghost" data-toast="Draft rejected (prototype)">Reject</button>
+            </div>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="card">
+            <div class="card-head"><div><h2>Policy checks</h2><div class="meta">Before any send</div></div></div>
+            <div class="list">
+              <div class="list-row"><div><div class="title">Consent</div><div class="desc">WhatsApp marketing + transactional</div></div><span class="pill pill-ok">OK</span></div>
+              <div class="list-row"><div><div class="title">Knowledge freshness</div><div class="desc">K-118 approved</div></div><span class="pill pill-ok">OK</span></div>
+              <div class="list-row"><div><div class="title">Inventory claim</div><div class="desc">Bound to authoritative availability</div></div><span class="pill pill-ok">OK</span></div>
+              <div class="list-row"><div><div class="title">Auto-send</div><div class="desc">Disabled at launch</div></div><span class="pill pill-dark">Off</span></div>
+            </div>
+          </div>
+          <div class="card dark">
+            <div class="card-head"><div><h2>Escalation order</h2><div class="meta">Pilot channels</div></div></div>
+            <p style="font-size:13px;line-height:1.6;margin:0;opacity:.9">1. Agent-approved WhatsApp<br>2. Task reminder to agent<br>3. Optional approved SMS<br>4. Voice — gated</p>
+          </div>
+        </div>
+      </div>
+    
+    </main>
+  </div>
+  <nav class="mobile-nav">
+    <a class="" href="agent-today.html"><span>▦</span>Today</a><a class="" href="buyer-360.html"><span>◎</span>Buyers</a><a class="" href="visits.html"><span>◷</span>Visits</a><a class="active" href="whatsapp.html"><span>💬</span>Msgs</a><a class="" href="manager.html"><span>☰</span>More</a>
+  </nav>
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AURA — Today</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/aura.css" />
+  <script src="../js/gate.js"></script>
+</head>
+<body>
+  <div class="banner"><strong>PROTOTYPE</strong> · Synthetic pilot data · <a href="../index.html" style="color:#daa291">All screens</a></div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo">AURA</div>
+        <div class="tag">Revenue OS · Phase 1</div>
+      </div>
+      <div class="profile">
+        <div class="avatar">AR</div>
+        <div>
+          <div class="name">Alex Rivera</div>
+          <div class="role">Sales Agent</div>
+        </div>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Menu</p>
+          <a class="nav-link active" href="agent-today.html"><span class="ico">▦</span>Today</a>
+          <a class="nav-link" href="pipeline.html"><span class="ico">☰</span>Pipeline</a>
+          <a class="nav-link" href="buyer-360.html"><span class="ico">◎</span>Buyers</a>
+          <a class="nav-link" href="whatsapp.html"><span class="ico">💬</span>Messages</a>
+          <a class="nav-link" href="visits.html"><span class="ico">◷</span>Visits</a>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Others</p>
+          <a class="nav-link" href="manager.html"><span class="ico">⚑</span>Manager</a>
+          <a class="nav-link" href="inventory.html"><span class="ico">▣</span>Inventory</a>
+          <a class="nav-link" href="knowledge.html"><span class="ico">◇</span>Knowledge</a>
+          <a class="nav-link" href="booking.html"><span class="ico">✓</span>Booking</a>
+          <a class="nav-link" href="executive.html"><span class="ico">◈</span>Executive</a>
+        <a class="nav-link" href="../index.html"><span class="ico">←</span>Prototype Hub</a>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <h1>Today</h1>
+          <p class="sub">Good morning, Alex · 3 visits · 5 high-priority actions · Project Greenfield Tower</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;flex:1;justify-content:flex-end;flex-wrap:wrap">
+          <label class="search"><input type="search" placeholder="Search buyers or units" /><span class="ico">⌕</span></label>
+          <button class="icon-btn" type="button" aria-label="Notifications"><span>🔔</span><span class="dot"></span></button>
+        </div>
+      </div>
+      
+      <div class="grid grid-13">
+        <div class="stack">
+          <div class="decision-card">
+            <div class="badges">
+              <span class="pill pill-accent">Primary · DPT-0005</span>
+              <span class="pill pill-ok">High confidence</span>
+              <span class="pill pill-fact">Fresh inventory</span>
+            </div>
+            <h3>Confirm site visit with Meera Shah</h3>
+            <p class="why">Buyer replied on WhatsApp 2h ago · Why now: visit window closing tomorrow</p>
+            <div class="evidence-box">
+              <div class="label">AI observation · Conversation extraction</div>
+              <p>Intent: Ready to view. Suggested time: 2:00 PM tomorrow. Decision-maker: spouse may join.</p>
+              <div class="fact-row">Authoritative fact: Unit 4B availability verified · price list v3.2 · freshness &lt; 4h</div>
+            </div>
+            <div class="meta-grid">
+              <div class="meta-cell"><div class="k">Lifecycle</div><div class="v">Proposed</div></div>
+              <div class="meta-cell"><div class="k">Approval</div><div class="v">Agent can execute</div></div>
+              <div class="meta-cell"><div class="k">Expires</div><div class="v">Today 18:00 IST</div></div>
+            </div>
+            <div class="btn-row">
+              <button class="btn btn-primary" data-toast="Visit confirmation queued (prototype)">Confirm visit</button>
+              <a class="btn btn-secondary" href="whatsapp.html">Review draft message</a>
+              <button class="btn btn-outline" data-toast="Delegated to manager queue (prototype)">Delegate</button>
+              <button class="btn btn-ghost" data-toast="Rejected with reason captured (prototype)">Reject</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <h2>Upcoming agenda</h2>
+                <div class="meta">Secondary items — do not compete with primary action</div>
+              </div>
+            </div>
+            <div class="list">
+              <a class="list-row" href="buyer-360.html">
+                <div class="avatar sm">MS</div>
+                <div><div class="title">Meera Shah</div><div class="desc">Site visit prep · Unit 4B</div></div>
+                <span class="amount">11:00</span><span class="chev">›</span>
+              </a>
+              <div class="list-row">
+                <div class="avatar sm" style="background:linear-gradient(145deg,#ada1a1,#2f292b)">JD</div>
+                <div><div class="title">Jay Desai</div><div class="desc">Follow-up · Fit review pending</div></div>
+                <span class="amount">14:30</span><span class="chev">›</span>
+              </div>
+              <div class="list-row">
+                <div class="avatar sm" style="background:linear-gradient(145deg,#daa291,#ada1a1)">SA</div>
+                <div><div class="title">Sana Ali</div><div class="desc">WhatsApp draft awaiting send</div></div>
+                <span class="amount">16:00</span><span class="chev">›</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card accent">
+            <div class="card-head">
+              <div>
+                <h2>Today's coverage</h2>
+                <div class="meta">Eligible buyers with a primary next action</div>
+              </div>
+              <a class="link-accent" href="pipeline.html">See all</a>
+            </div>
+            <div class="stat"><div class="label"><span>Actions executed</span><strong>12 / 18</strong></div><div class="progress"><i style="width:67%"></i></div></div>
+            <div class="stat"><div class="label"><span>Visits confirmed</span><strong>3</strong></div><div class="progress"><i style="width:45%"></i></div></div>
+            <div class="stat"><div class="label"><span>Drafts pending approval</span><strong>2</strong></div><div class="progress"><i style="width:30%"></i></div></div>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><h2>Missing information</h2><div class="meta">Blocks higher confidence</div></div></div>
+            <div class="list">
+              <div class="list-row"><div><div class="title">Household income band</div><div class="desc">Meera Shah · optional for fit</div></div><span class="pill pill-warn">Gap</span></div>
+              <div class="list-row"><div><div class="title">Consent for voice</div><div class="desc">Not Phase 1 default</div></div><span class="pill pill-ai">Gated</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </main>
+  </div>
+  <nav class="mobile-nav">
+    <a class="active" href="agent-today.html"><span>▦</span>Today</a><a class="" href="buyer-360.html"><span>◎</span>Buyers</a><a class="" href="visits.html"><span>◷</span>Visits</a><a class="" href="whatsapp.html"><span>💬</span>Msgs</a><a class="" href="manager.html"><span>☰</span>More</a>
+  </nav>
+  <script src="../js/app.js"></script>
+</body>
+</html>

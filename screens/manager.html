@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AURA — Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/aura.css" />
+  <script src="../js/gate.js"></script>
+</head>
+<body>
+  <div class="banner"><strong>PROTOTYPE</strong> · Synthetic pilot data · <a href="../index.html" style="color:#daa291">All screens</a></div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo">AURA</div>
+        <div class="tag">Revenue OS · Phase 1</div>
+      </div>
+      <div class="profile">
+        <div class="avatar">PN</div>
+        <div>
+          <div class="name">Priya Nair</div>
+          <div class="role">Sales Manager</div>
+        </div>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Menu</p>
+          <a class="nav-link" href="agent-today.html"><span class="ico">▦</span>Today</a>
+          <a class="nav-link" href="pipeline.html"><span class="ico">☰</span>Pipeline</a>
+          <a class="nav-link" href="buyer-360.html"><span class="ico">◎</span>Buyers</a>
+          <a class="nav-link" href="whatsapp.html"><span class="ico">💬</span>Messages</a>
+          <a class="nav-link" href="visits.html"><span class="ico">◷</span>Visits</a>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Others</p>
+          <a class="nav-link active" href="manager.html"><span class="ico">⚑</span>Manager</a>
+          <a class="nav-link" href="inventory.html"><span class="ico">▣</span>Inventory</a>
+          <a class="nav-link" href="knowledge.html"><span class="ico">◇</span>Knowledge</a>
+          <a class="nav-link" href="booking.html"><span class="ico">✓</span>Booking</a>
+          <a class="nav-link" href="executive.html"><span class="ico">◈</span>Executive</a>
+        <a class="nav-link" href="../index.html"><span class="ico">←</span>Prototype Hub</a>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <h1>Manager</h1>
+          <p class="sub">Project-scoped review queue · oldest expiry first · Greenfield Tower</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;flex:1;justify-content:flex-end;flex-wrap:wrap">
+          <label class="search"><input type="search" placeholder="Search recommendations" /><span class="ico">⌕</span></label>
+          <button class="icon-btn" type="button" aria-label="Notifications"><span>🔔</span><span class="dot"></span></button>
+        </div>
+      </div>
+      
+      <div class="grid grid-13">
+        <div class="card">
+          <div class="card-head">
+            <div><h2>Review required</h2><div class="meta">DPT-0006 · no tenant-wide queue</div></div>
+            <span class="pill pill-warn">4 waiting</span>
+          </div>
+          <table class="table">
+            <thead><tr><th>Buyer</th><th>Product</th><th>Risk</th><th>Expires</th><th>Actions</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Jay Desai</td><td>Fit override</td><td><span class="pill pill-warn">SLA</span></td><td>16:00</td>
+                <td>
+                  <button class="btn btn-primary" style="padding:6px 12px;font-size:12px" data-toast="Approved (prototype)">Approve</button>
+                  <button class="btn btn-outline" style="padding:6px 12px;font-size:12px" data-toast="Rejected (prototype)">Reject</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Sana Ali</td><td>WhatsApp exception</td><td><span class="pill pill-ai">Consent edge</span></td><td>17:30</td>
+                <td>
+                  <button class="btn btn-primary" style="padding:6px 12px;font-size:12px" data-toast="Delegated (prototype)">Delegate</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Ravi Kumar</td><td>Intervention</td><td><span class="pill pill-warn">Stale</span></td><td>18:00</td>
+                <td>
+                  <button class="btn btn-secondary" style="padding:6px 12px;font-size:12px" data-toast="Override logged (prototype)">Override</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="stack">
+          <div class="card dark">
+            <div class="card-head"><div><h2>Team pulse</h2><div class="meta">Adoption · not vanity</div></div></div>
+            <div class="stat"><div class="label"><span>Recommendations viewed</span><strong>78%</strong></div><div class="progress"><i style="width:78%"></i></div></div>
+            <div class="stat"><div class="label"><span>Executed</span><strong>61%</strong></div><div class="progress"><i style="width:61%"></i></div></div>
+            <div class="stat"><div class="label"><span>Bypassed workflow</span><strong>9%</strong></div><div class="progress"><i style="width:9%"></i></div></div>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><h2>Guardrails</h2></div></div>
+            <p style="font-size:13px;color:var(--grey);line-height:1.5;margin:0">Manager status does not grant identity decryption, booking authority, or tenant-wide queues.</p>
+          </div>
+        </div>
+      </div>
+    
+    </main>
+  </div>
+  <nav class="mobile-nav">
+    <a class="" href="agent-today.html"><span>▦</span>Today</a><a class="" href="buyer-360.html"><span>◎</span>Buyers</a><a class="" href="visits.html"><span>◷</span>Visits</a><a class="" href="whatsapp.html"><span>💬</span>Msgs</a><a class="active" href="manager.html"><span>☰</span>More</a>
+  </nav>
+  <script src="../js/app.js"></script>
+</body>
+</html>

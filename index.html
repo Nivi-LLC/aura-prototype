@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AURA — Product Prototype (Stakeholder Demo)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/aura.css" />
+  <script src="js/gate.js"></script>
+</head>
+<body class="hub">
+  <div class="banner">
+    <strong>PROTOTYPE</strong> · Synthetic data only · Not production · Visual language from
+    <a href="https://www.figma.com/design/fAkiDplcKJx9ZqhODbH1DZ/Finance-Dashboard-UI-Kit-by-Paperpillar--Community-" style="color:#daa291;text-decoration:underline" target="_blank" rel="noopener">Paperpillar Finance Dashboard UI Kit</a>
+    · Product content from AURA Blueprint / real plan
+  </div>
+
+  <div class="hub-inner">
+    <header class="hub-hero">
+      <p class="eyebrow">AURA · AI Revenue Operating System</p>
+      <h1>Phase 1 product prototype</h1>
+      <p>
+        Click-through demo for stakeholders and builders. Shows decision-first workspaces
+        for the revenue conversion journey — not a CRM replacement, not autonomous sales.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="screens/agent-today.html">Start as Sales Agent</a>
+        <a class="btn btn-secondary" href="screens/executive.html">Open Executive Brief</a>
+        <a class="btn btn-outline" href="screens/manager.html">Manager Command Center</a>
+      </div>
+    </header>
+
+    <div class="journey" aria-label="Phase 1 journey">
+      <span>Lead</span>
+      <span>Buyer</span>
+      <span>Intent</span>
+      <span>Unit Fit</span>
+      <span>Conversation</span>
+      <span>Site Visit</span>
+      <span>Booking Readiness</span>
+      <span>Outcome</span>
+      <span>Learn</span>
+    </div>
+
+    <h2 class="section-title">Screens</h2>
+    <div class="screen-grid">
+      <a class="screen-tile" href="screens/agent-today.html">
+        <div class="num">01</div>
+        <h3>Agent Today</h3>
+        <p>One primary Decision Card. Next action, evidence, confidence, approve/reject.</p>
+        <div class="role-tag">Sales Agent · DPT-0001 / 0005</div>
+      </a>
+      <a class="screen-tile" href="screens/buyer-360.html">
+        <div class="num">02</div>
+        <h3>Buyer 360</h3>
+        <p>Household, intent, unit fit — facts vs AI observations separated.</p>
+        <div class="role-tag">Sales Agent · DPT-0002</div>
+      </a>
+      <a class="screen-tile" href="screens/whatsapp.html">
+        <div class="num">03</div>
+        <h3>WhatsApp Workspace</h3>
+        <p>Agent-approved outbound drafts. Shadow → human review before send.</p>
+        <div class="role-tag">Sales Agent · DPT-0003</div>
+      </a>
+      <a class="screen-tile" href="screens/pipeline.html">
+        <div class="num">04</div>
+        <h3>Lead Pipeline</h3>
+        <p>Priority queue with freshness and coverage — not a vanity funnel.</p>
+        <div class="role-tag">Sales Agent / Manager</div>
+      </a>
+      <a class="screen-tile" href="screens/visits.html">
+        <div class="num">05</div>
+        <h3>Site Visit Outcome</h3>
+        <p>Check-in, units shown, objections, next action with evidence.</p>
+        <div class="role-tag">Sales Agent · DPT-0005</div>
+      </a>
+      <a class="screen-tile" href="screens/manager.html">
+        <div class="num">06</div>
+        <h3>Manager Command Center</h3>
+        <p>Review-required queue, SLA risk, approve / reject / delegate.</p>
+        <div class="role-tag">Sales Manager · DPT-0006</div>
+      </a>
+      <a class="screen-tile" href="screens/inventory.html">
+        <div class="num">07</div>
+        <h3>Inventory Stewardship</h3>
+        <p>Price-list versioning, availability freshness, conflict flags.</p>
+        <div class="role-tag">Project / Inventory Steward</div>
+      </a>
+      <a class="screen-tile" href="screens/knowledge.html">
+        <div class="num">08</div>
+        <h3>Knowledge Approver</h3>
+        <p>Approve, expire, supersede knowledge used in conversation drafts.</p>
+        <div class="role-tag">Knowledge Approver</div>
+      </a>
+      <a class="screen-tile" href="screens/booking.html">
+        <div class="num">09</div>
+        <h3>Booking &amp; Evidence</h3>
+        <p>Terminal outcomes with lineage — booking, loss, cancellation.</p>
+        <div class="role-tag">Booking / Finance Authority</div>
+      </a>
+      <a class="screen-tile" href="screens/executive.html">
+        <div class="num">10</div>
+        <h3>Executive Revenue Brief</h3>
+        <p>Pipeline coverage, readiness bands, opportunity range, interventions.</p>
+        <div class="role-tag">Executive Sponsor · DPT-0007 / 0008</div>
+      </a>
+    </div>
+
+    <div class="note">
+      <strong>For builders:</strong> This is a vision / stakeholder prototype. Current platform milestone M05
+      implements only the Decision Card experience for Sales Agent and Sales Manager (DPT-0002 path).
+      Later surfaces (Buyer 360, Executive Brief, WhatsApp send, etc.) remain gated by the release ladder
+      in the blueprint. Do not treat this HTML as implementation scope.
+      <br /><br />
+      <strong>Figma source:</strong> Finance Dashboard UI Kit by Paperpillar (Community) —
+      tokens Custom <code>#DAA291</code>, Black <code>#121212</code>, Grey <code>#737B8B</code>,
+      Brown <code>#2F292B</code>, canvas <code>#ECF1F4</code>, Inter, soft pills &amp; cards.
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
