@@ -20,7 +20,9 @@ python3 -m http.server 8765
 
 ## GitHub Pages
 
-Site publishes from the `main` branch root. After deploy, open the Pages URL and enter `9999`.
+Live site: https://nivi-llc.github.io/aura-prototype/
+
+Publishes from the `main` branch root. Password: `9999`.
 
 ## Screens
 
