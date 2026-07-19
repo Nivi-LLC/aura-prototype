@@ -69,10 +69,20 @@
               placeholder="Ask about pipeline, Meera Shah, revenue, visits…"
               maxlength="500"
             ></textarea>
+            <button
+              class="ask-voice"
+              type="button"
+              id="ask-voice"
+              aria-label="Speak to Ask NIVI"
+              title="Speak"
+            >
+              <span class="ask-voice-ico" aria-hidden="true">🎙</span>
+            </button>
             <button class="btn btn-primary ask-send" type="submit" id="ask-send" aria-label="Send">
               Send
             </button>
           </form>
+          <p class="ask-voice-status" id="ask-voice-status" hidden></p>
           <p class="ask-footnote">Prototype replies · not a live model · synthetic data only</p>
         </div>
       </div>
