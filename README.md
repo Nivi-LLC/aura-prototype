@@ -48,6 +48,7 @@ No Approve & send, no manager review queue, no knowledge/inventory/booking human
 | `screens/buyer-journey.html` | Meera journey · auto vs field badges |
 | `screens/executive.html` | Executive revenue brief (readout) |
 | `screens/ask-nivi.html` | Demo copilot (scripted replies) |
+| `screens/nivi-intelligence.html` | Learned memory across personas |
 
 ## Important disclaimers
 
