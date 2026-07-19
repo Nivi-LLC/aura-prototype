@@ -106,7 +106,7 @@ function setupReveals() {
 function setupIntelChips() {
   document.querySelectorAll(".pill.pill-ok, .pill.pill-accent").forEach((pill) => {
     const t = (pill.textContent || "").trim().toLowerCase();
-    if (t === "live" || t === "aura auto" || t === "ai owned" || t === "ai operated") {
+    if (t === "live" || t === "nivi auto" || t === "ai owned" || t === "ai operated") {
       pill.classList.add("intel-chip");
       pill.classList.remove("pill-ok", "pill-accent");
     }
@@ -129,7 +129,7 @@ function setupMobileNav() {
 
   if (!document.querySelector(".mobile-top")) {
     const pageTitle =
-      document.querySelector(".topbar h1")?.textContent?.trim() || "AURA";
+      document.querySelector(".topbar h1")?.textContent?.trim() || "NIVI";
     const pageSub =
       document.querySelector(".sidebar-brand .tag")?.textContent?.trim() ||
       "Phase 1 · AI Revenue OS";

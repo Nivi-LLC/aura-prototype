@@ -41,7 +41,7 @@
         '<div class="bg-video-scrim" aria-hidden="true"></div>' +
         '<div class="gate">' +
         '<form class="gate-card" id="aura-gate-form" autocomplete="off">' +
-        '<div class="gate-brand">AURA</div>' +
+        '<div class="gate-brand">NIVI</div>' +
         '<p class="gate-sub">Prototype access</p>' +
         '<label class="gate-label" for="aura-gate-pass">Password</label>' +
         '<input class="gate-input" id="aura-gate-pass" type="password" inputmode="numeric" maxlength="16" placeholder="Enter password" autofocus />' +

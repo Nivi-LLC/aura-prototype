@@ -1,8 +1,8 @@
-# AURA Product Prototype (static HTML)
+# NIVI Product Prototype (static HTML)
 
-Stakeholder click-through demo for **AURA Phase 1 — fully AI-automated Revenue OS**.
+Stakeholder click-through demo for **NIVI Phase 1 — fully AI-automated Revenue OS**.
 
-- **Location:** outside the five AURA product repos (not platform code).
+- **Location:** outside the five NIVI product repos (not platform code).
 - **Stack:** plain HTML + CSS + a tiny JS toast helper. No build step.
 - **Visual system:** executive palette + liquid glass.  
   Tokens: Primary `#1E293B`, Accent `#C08A69`, Background `#F8F8F6`, Card `#FFFFFF`, Border `#E7E5E4`, Success `#16A34A`, Warning `#D97706`, Error `#DC2626`, text `#111827` / `#6B7280`.
@@ -27,7 +27,7 @@ Publishes from the `main` branch root. Password: `9999`.
 
 ## Product story
 
-**AURA runs the full revenue OS; humans only show the site and submit visit feedback.**
+**NIVI runs the full revenue OS; humans only show the site and submit visit feedback.**
 
 No Approve & send, no manager review queue, no knowledge/inventory/booking human authority screens.
 
@@ -40,11 +40,11 @@ No Approve & send, no manager review queue, no knowledge/inventory/booking human
 | `screens/pipeline.html` | AI priority queue |
 | `screens/buyer-360.html` | Buyer understanding · fact vs observation |
 | `screens/whatsapp.html` | Auto-sent WhatsApp log |
-| `screens/marketing-campaigns.html` | Multi-channel campaigns under AURA |
-| `screens/marketing-funnel.html` | Open → click → form → AURA |
+| `screens/marketing-campaigns.html` | Multi-channel campaigns under NIVI |
+| `screens/marketing-funnel.html` | Open → click → form → NIVI |
 | `screens/marketing-nurture.html` | Auto nurture + advisory forecasts |
 | `screens/field-agent.html` | **Human** · visit queue + brief |
-| `screens/visit-feedback.html` | **Human** · feedback → AURA |
+| `screens/visit-feedback.html` | **Human** · feedback → NIVI |
 | `screens/buyer-journey.html` | Meera journey · auto vs field badges |
 | `screens/executive.html` | Executive revenue brief (readout) |
 
