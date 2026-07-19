@@ -45,7 +45,12 @@ function setupBgVideo() {
   video.setAttribute("playsinline", "");
   video.setAttribute("webkit-playsinline", "");
   video.preload = "auto";
+  video.poster = assetPath("holographic-gradient-06.png");
   video.src = assetPath("bg-loop.mp4");
+
+  const fallback = document.createElement("div");
+  fallback.className = "bg-holo-fallback";
+  fallback.setAttribute("aria-hidden", "true");
 
   const scrim = document.createElement("div");
   scrim.className = "bg-video-scrim";
@@ -53,6 +58,7 @@ function setupBgVideo() {
 
   document.body.prepend(scrim);
   document.body.prepend(video);
+  document.body.prepend(fallback);
   document.body.classList.add("has-bg-video");
 
   const markReady = () => video.classList.add("is-ready");

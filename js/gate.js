@@ -32,14 +32,15 @@
 
     function paint() {
       document.documentElement.style.visibility = "visible";
-      var media =
-        location.pathname.indexOf("/screens/") !== -1
-          ? "../assets/bg-loop.mp4"
-          : "assets/bg-loop.mp4";
+      var base =
+        location.pathname.indexOf("/screens/") !== -1 ? "../assets/" : "assets/";
       document.body.innerHTML =
-        '<video class="bg-video is-ready" aria-hidden="true" muted loop autoplay playsinline webkit-playsinline preload="auto" src="' +
-        media +
-        '"></video>' +
+        '<div class="bg-holo-fallback" aria-hidden="true"></div>' +
+        '<video class="bg-video is-ready" aria-hidden="true" muted loop autoplay playsinline webkit-playsinline preload="auto" poster="' +
+        base +
+        "holographic-gradient-06.png\" src=\"" +
+        base +
+        'bg-loop.mp4"></video>' +
         '<div class="bg-video-scrim" aria-hidden="true"></div>' +
         '<div class="gate">' +
         '<form class="gate-card" id="aura-gate-form" autocomplete="off">' +

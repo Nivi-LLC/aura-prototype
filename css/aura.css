@@ -77,7 +77,18 @@ body {
   background-attachment: fixed;
 }
 
-/* Full-bleed looping video background */
+/* Full-bleed holographic background (Figma Light Gradient 06) */
+.bg-holo-fallback {
+  position: fixed;
+  inset: 0;
+  z-index: -4;
+  pointer-events: none;
+  background:
+    url("../assets/holographic-gradient-06.png") center / cover no-repeat;
+  transform: scale(1.06);
+  animation: aura-holo-drift 28s var(--ease-fluid) infinite alternate;
+}
+
 .bg-video {
   position: fixed;
   inset: 0;
@@ -95,19 +106,28 @@ body {
   opacity: 1;
 }
 
+@keyframes aura-holo-drift {
+  0% {
+    transform: scale(1.06) translate3d(-1.5%, -1%, 0);
+  }
+  100% {
+    transform: scale(1.12) translate3d(1.5%, 1.5%, 0);
+  }
+}
+
 .bg-video-scrim {
   position: fixed;
   inset: 0;
   z-index: -2;
   pointer-events: none;
+  /* Light veil so Figma holographic gradient stays visible under glass UI */
   background:
     linear-gradient(
       180deg,
-      rgba(248, 248, 246, 0.72) 0%,
-      rgba(248, 248, 246, 0.55) 40%,
-      rgba(248, 248, 246, 0.78) 100%
-    ),
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(192, 138, 105, 0.12), transparent 55%);
+      rgba(248, 248, 246, 0.42) 0%,
+      rgba(248, 248, 246, 0.28) 45%,
+      rgba(248, 248, 246, 0.55) 100%
+    );
 }
 
 body.has-bg-video {
@@ -135,6 +155,11 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   .bg-video {
     display: none !important;
+  }
+
+  .bg-holo-fallback {
+    animation: none;
+    transform: scale(1.06);
   }
 
   body.has-bg-video::before {
