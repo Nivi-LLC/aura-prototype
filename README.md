@@ -4,8 +4,9 @@ Stakeholder click-through demo for **AURA Phase 1 — fully AI-automated Revenue
 
 - **Location:** outside the five AURA product repos (not platform code).
 - **Stack:** plain HTML + CSS + a tiny JS toast helper. No build step.
-- **Visual system:** adapted from [Finance Dashboard UI Kit by Paperpillar (Community)](https://www.figma.com/design/fAkiDplcKJx9ZqhODbH1DZ/Finance-Dashboard-UI-Kit-by-Paperpillar--Community-)  
+- **Visual system:** executive palette + liquid glass.  
   Tokens: Primary `#1E293B`, Accent `#C08A69`, Background `#F8F8F6`, Card `#FFFFFF`, Border `#E7E5E4`, Success `#16A34A`, Warning `#D97706`, Error `#DC2626`, text `#111827` / `#6B7280`.
+- **Background video:** looping soft abstract clip at `assets/bg-loop.mp4` (replace with your own MP4 anytime). Disabled when `prefers-reduced-motion` is on.
 - **Product content:** Stakeholder vision of full automation; see [VISION.md](VISION.md) for divergence from product-specs.
 
 ## Open locally

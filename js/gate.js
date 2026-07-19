@@ -32,7 +32,15 @@
 
     function paint() {
       document.documentElement.style.visibility = "visible";
+      var media =
+        location.pathname.indexOf("/screens/") !== -1
+          ? "../assets/bg-loop.mp4"
+          : "assets/bg-loop.mp4";
       document.body.innerHTML =
+        '<video class="bg-video is-ready" aria-hidden="true" muted loop autoplay playsinline webkit-playsinline preload="auto" src="' +
+        media +
+        '"></video>' +
+        '<div class="bg-video-scrim" aria-hidden="true"></div>' +
         '<div class="gate">' +
         '<form class="gate-card" id="aura-gate-form" autocomplete="off">' +
         '<div class="gate-brand">AURA</div>' +
@@ -43,6 +51,12 @@
         '<button class="btn btn-primary block" type="submit">Open prototype</button>' +
         '<p class="gate-note">Stakeholder demo · synthetic data only</p>' +
         "</form></div>";
+      document.body.classList.add("has-bg-video");
+      var vid = document.querySelector(".bg-video");
+      if (vid && vid.play) {
+        var p = vid.play();
+        if (p && p.catch) p.catch(function () {});
+      }
 
       var form = document.getElementById("aura-gate-form");
       var input = document.getElementById("aura-gate-pass");

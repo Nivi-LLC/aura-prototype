@@ -24,6 +24,51 @@ function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
+function assetPath(file) {
+  return location.pathname.indexOf("/screens/") !== -1
+    ? `../assets/${file}`
+    : `assets/${file}`;
+}
+
+function setupBgVideo() {
+  if (prefersReducedMotion()) return;
+  if (document.querySelector(".bg-video")) return;
+
+  const video = document.createElement("video");
+  video.className = "bg-video";
+  video.setAttribute("aria-hidden", "true");
+  video.muted = true;
+  video.defaultMuted = true;
+  video.loop = true;
+  video.autoplay = true;
+  video.playsInline = true;
+  video.setAttribute("playsinline", "");
+  video.setAttribute("webkit-playsinline", "");
+  video.preload = "auto";
+  video.src = assetPath("bg-loop.mp4");
+
+  const scrim = document.createElement("div");
+  scrim.className = "bg-video-scrim";
+  scrim.setAttribute("aria-hidden", "true");
+
+  document.body.prepend(scrim);
+  document.body.prepend(video);
+  document.body.classList.add("has-bg-video");
+
+  const markReady = () => video.classList.add("is-ready");
+  video.addEventListener("loadeddata", markReady, { once: true });
+  video.addEventListener("canplay", markReady, { once: true });
+
+  const play = () => {
+    const p = video.play();
+    if (p && typeof p.catch === "function") p.catch(() => {});
+  };
+  play();
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) play();
+  });
+}
+
 function setupReveals() {
   if (prefersReducedMotion()) return;
 
@@ -143,6 +188,7 @@ function setupMobileNav() {
 document.addEventListener("DOMContentLoaded", () => {
   const year = document.querySelector("[data-year]");
   if (year) year.textContent = String(new Date().getFullYear());
+  setupBgVideo();
   setupMobileNav();
   setupIntelChips();
   setupReveals();
