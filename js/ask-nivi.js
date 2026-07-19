@@ -1,4 +1,4 @@
-/* Ask NIVI — ChatGPT-style demo chatbot (offline scripted replies) */
+/* Ask NIVI — demo chatbot (offline scripted replies) */
 
 (function () {
   const WELCOME =
