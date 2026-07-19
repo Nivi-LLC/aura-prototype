@@ -46,14 +46,14 @@ async function setupHoloBackground() {
   document.body.classList.add("has-bg-video");
 
   // Static poster while SVG loads / for reduced motion
-  root.style.backgroundImage = `url("${assetPath("holographic-gradient-06.png")}")`;
+  root.style.backgroundImage = `url("${assetPath("holographic-gradient-11.png")}")`;
   root.style.backgroundSize = "cover";
   root.style.backgroundPosition = "center";
 
   if (prefersReducedMotion()) return;
 
   try {
-    const res = await fetch(assetPath("holographic-gradient-06-fluid.svg"), {
+    const res = await fetch(assetPath("holographic-gradient-11-fluid.svg"), {
       cache: "force-cache",
     });
     if (!res.ok) throw new Error("svg fetch failed");

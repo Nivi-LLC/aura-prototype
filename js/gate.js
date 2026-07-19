@@ -37,7 +37,7 @@
       document.body.innerHTML =
         '<div class="bg-holo" aria-hidden="true" style="background-image:url(' +
         base +
-        'holographic-gradient-06.png)"></div>' +
+        'holographic-gradient-11.png)"></div>' +
         '<div class="bg-video-scrim" aria-hidden="true"></div>' +
         '<div class="gate">' +
         '<form class="gate-card" id="aura-gate-form" autocomplete="off">' +
@@ -50,8 +50,8 @@
         '<p class="gate-note">Stakeholder demo · synthetic data only</p>' +
         "</form></div>";
       document.body.classList.add("has-bg-video");
-      // Hydrate fluid SVG blobs (peach / pink / sky / blue core)
-      fetch(base + "holographic-gradient-06-fluid.svg")
+      // Hydrate fluid SVG blobs (green / orange / blue / cyan core)
+      fetch(base + "holographic-gradient-11-fluid.svg")
         .then(function (r) {
           return r.ok ? r.text() : Promise.reject();
         })

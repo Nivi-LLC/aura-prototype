@@ -6,7 +6,7 @@ Stakeholder click-through demo for **AURA Phase 1 — fully AI-automated Revenue
 - **Stack:** plain HTML + CSS + a tiny JS toast helper. No build step.
 - **Visual system:** executive palette + liquid glass.  
   Tokens: Primary `#1E293B`, Accent `#C08A69`, Background `#F8F8F6`, Card `#FFFFFF`, Border `#E7E5E4`, Success `#16A34A`, Warning `#D97706`, Error `#DC2626`, text `#111827` / `#6B7280`.
-- **Background:** [Figma Light Gradient 06](https://www.figma.com/design/WG9pV4FbOFd8QTwfT6LxsA/12-Free-Holographic-Light-Gradients-1.0--Community-?node-id=8-89) — peach / pink / sky / blue shapes animated as fluid blobs in `assets/holographic-gradient-06-fluid.svg` (static PNG fallback). Motion off when `prefers-reduced-motion` is on.
+- **Background:** [Figma Light Gradient 11](https://www.figma.com/design/WG9pV4FbOFd8QTwfT6LxsA/12-Free-Holographic-Light-Gradients-1.0--Community-?node-id=8-119) — green / orange / blue shapes animated as fluid blobs in `assets/holographic-gradient-11-fluid.svg` (static PNG fallback). Motion off when `prefers-reduced-motion` is on.
 - **Product content:** Stakeholder vision of full automation; see [VISION.md](VISION.md) for divergence from product-specs.
 
 ## Open locally
