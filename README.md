@@ -5,7 +5,7 @@ Stakeholder / builder click-through demo for **AURA Phase 1 — Revenue Conversi
 - **Location:** outside the five AURA product repos (not platform code).
 - **Stack:** plain HTML + CSS + a tiny JS toast helper. No build step.
 - **Visual system:** adapted from [Finance Dashboard UI Kit by Paperpillar (Community)](https://www.figma.com/design/fAkiDplcKJx9ZqhODbH1DZ/Finance-Dashboard-UI-Kit-by-Paperpillar--Community-)  
-  Tokens: Custom `#DAA291`, Black `#121212`, Grey `#737B8B`, Brown `#2F292B`, Light brown `#ADA1A1`, canvas `#ECF1F4`, Inter, soft sidebar pills and cards.
+  Tokens: Custom `#9CB2A5`, Black `#121212`, Grey `#737B8B`, Brown `#2F292B`, Light brown `#ADA1A1`, canvas `#ECF1F4`, Inter, soft sidebar pills and cards.
 - **Product content:** AURA company master blueprint / real plan (Decision Products, Decision Cards, role workspaces, release ladder).
 
 ## Open locally
