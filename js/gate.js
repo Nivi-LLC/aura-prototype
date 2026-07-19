@@ -1,12 +1,12 @@
 /* Lightweight client-side gate for stakeholder demo. Not real security. */
 (function () {
-  var KEY = "aura_prototype_unlocked";
+  var KEY = "nivi_prototype_unlocked";
   var PASS = "9999";
 
   function cssPath() {
     return location.pathname.indexOf("/screens/") !== -1
-      ? "../css/aura.css"
-      : "css/aura.css";
+      ? "../css/nivi.css"
+      : "css/nivi.css";
   }
 
   function unlock() {
@@ -40,12 +40,12 @@
         'holographic-gradient-11.png)"></div>' +
         '<div class="bg-video-scrim" aria-hidden="true"></div>' +
         '<div class="gate">' +
-        '<form class="gate-card" id="aura-gate-form" autocomplete="off">' +
+        '<form class="gate-card" id="nivi-gate-form" autocomplete="off">' +
         '<div class="gate-brand">NIVI</div>' +
         '<p class="gate-sub">Prototype access</p>' +
-        '<label class="gate-label" for="aura-gate-pass">Password</label>' +
-        '<input class="gate-input" id="aura-gate-pass" type="password" inputmode="numeric" maxlength="16" placeholder="Enter password" autofocus />' +
-        '<p class="gate-error" id="aura-gate-error" hidden>Incorrect password</p>' +
+        '<label class="gate-label" for="nivi-gate-pass">Password</label>' +
+        '<input class="gate-input" id="nivi-gate-pass" type="password" inputmode="numeric" maxlength="16" placeholder="Enter password" autofocus />' +
+        '<p class="gate-error" id="nivi-gate-error" hidden>Incorrect password</p>' +
         '<button class="btn btn-primary block" type="submit">Open prototype</button>' +
         '<p class="gate-note">Stakeholder demo · synthetic data only</p>' +
         "</form></div>";
@@ -66,9 +66,9 @@
         })
         .catch(function () {});
 
-      var form = document.getElementById("aura-gate-form");
-      var input = document.getElementById("aura-gate-pass");
-      var err = document.getElementById("aura-gate-error");
+      var form = document.getElementById("nivi-gate-form");
+      var input = document.getElementById("nivi-gate-pass");
+      var err = document.getElementById("nivi-gate-error");
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         if ((input.value || "").trim() === PASS) {

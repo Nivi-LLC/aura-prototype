@@ -28,7 +28,7 @@ Ad / lead in
 
 | Screen | Notes |
 |---|---|
-| `aura-brain.html` | Live auto action console |
+| `nivi-brain.html` | Live auto action console |
 | `pipeline.html` | Priority queue — no approval CTAs |
 | `buyer-360.html` | Facts vs observations; next action executing |
 | `whatsapp.html` | Sent log · `NIVI auto` |

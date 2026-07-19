@@ -36,7 +36,7 @@ No Approve & send, no manager review queue, no knowledge/inventory/booking human
 | File | Intent |
 |---|---|
 | `index.html` | Hub + journey map |
-| `screens/aura-brain.html` | Primary console · overnight/live auto actions |
+| `screens/nivi-brain.html` | Primary console · overnight/live auto actions |
 | `screens/pipeline.html` | AI priority queue |
 | `screens/buyer-360.html` | Buyer understanding · fact vs observation |
 | `screens/whatsapp.html` | Auto-sent WhatsApp log |
