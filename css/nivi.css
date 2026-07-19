@@ -1268,6 +1268,47 @@ img {
   margin: 0 0 24px;
 }
 
+.hub-lead {
+  max-width: 640px;
+  margin: 0 0 24px;
+  min-height: 3.2em;
+}
+
+.hub-line {
+  font-size: 17px;
+  color: var(--grey);
+  line-height: 1.55;
+  margin: 0;
+  max-width: 640px;
+  min-height: 1.55em;
+}
+
+.hub-line + .hub-line {
+  margin-top: 8px;
+}
+
+.hub-line.is-typing::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 3px;
+  vertical-align: -0.12em;
+  background: var(--accent-deep);
+  animation: nivi-caret 0.85s steps(1) infinite;
+}
+
+@keyframes nivi-caret {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
 .journey {
   display: flex;
   flex-wrap: wrap;
@@ -1918,7 +1959,8 @@ img {
   .decision-card::before,
   .hub-hero .eyebrow::before,
   .intel-chip,
-  .intel-chip::before {
+  .intel-chip::before,
+  .hub-line.is-typing::after {
     animation: none !important;
   }
 

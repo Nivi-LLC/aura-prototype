@@ -71,7 +71,71 @@ async function setupHoloBackground() {
   }
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function typeLine(el, charsPerMs = 22) {
+  const text = (el.textContent || "").replace(/\s+/g, " ").trim();
+  el.textContent = "";
+  el.setAttribute("aria-label", text);
+  el.classList.add("is-typing");
+
+  for (let i = 0; i < text.length; i++) {
+    el.textContent = text.slice(0, i + 1);
+    await sleep(charsPerMs);
+  }
+
+  el.classList.remove("is-typing");
+  el.classList.add("is-done");
+}
+
+/** Hub-only: type the two lead lines, then reveal the rest of the page. */
+function setupHubStoryReveal() {
+  if (!document.body.classList.contains("hub")) return false;
+
+  const lines = [...document.querySelectorAll("[data-type-line]")];
+  const rest = [
+    ...document.querySelectorAll(".hub-hero .btn-row"),
+    ...document.querySelectorAll(".journey span"),
+    ...document.querySelectorAll(".screen-tile"),
+  ];
+
+  rest.forEach((el) => el.classList.add("reveal"));
+
+  if (!lines.length) {
+    rest.forEach((el) => el.classList.add("is-in"));
+    return true;
+  }
+
+  if (prefersReducedMotion()) {
+    lines.forEach((el) => el.classList.add("is-done"));
+    rest.forEach((el) => el.classList.add("is-in"));
+    return true;
+  }
+
+  document.body.classList.add("page-enter");
+
+  (async () => {
+    for (const line of lines) {
+      await typeLine(line);
+      await sleep(320);
+    }
+
+    rest.forEach((el, i) => {
+      el.style.setProperty("--reveal-delay", `${Math.min(i * 50, 420)}ms`);
+    });
+
+    requestAnimationFrame(() => {
+      rest.forEach((el) => el.classList.add("is-in"));
+    });
+  })();
+
+  return true;
+}
+
 function setupReveals() {
+  if (setupHubStoryReveal()) return;
   if (prefersReducedMotion()) return;
 
   document.body.classList.add("page-enter");
