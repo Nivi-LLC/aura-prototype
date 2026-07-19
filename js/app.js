@@ -90,7 +90,30 @@ async function typeLine(el, text, charsPerMs = 22) {
   el.classList.add("is-done");
 }
 
-/** Hub-only: type the two lead lines, then reveal the rest of the page. */
+const HUB_INTRO_KEY = "nivi_hub_intro_pending";
+
+function consumeHubIntroPending() {
+  try {
+    if (sessionStorage.getItem(HUB_INTRO_KEY) !== "1") return false;
+    sessionStorage.removeItem(HUB_INTRO_KEY);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function showHubStatic(lines, rest) {
+  lines.forEach((el) => {
+    el.classList.remove("is-waiting", "is-typing");
+    el.classList.add("is-done");
+  });
+  rest.forEach((el) => {
+    el.classList.remove("reveal");
+    el.classList.add("is-in");
+  });
+}
+
+/** Hub-only: typewriter once after passport unlock; later visits show static. */
 function setupHubStoryReveal() {
   if (!document.body.classList.contains("hub")) return false;
 
@@ -101,19 +124,19 @@ function setupHubStoryReveal() {
     ...document.querySelectorAll(".screen-tile"),
   ];
 
-  rest.forEach((el) => el.classList.add("reveal"));
+  const playIntro = consumeHubIntroPending();
 
   if (!lines.length) {
-    rest.forEach((el) => el.classList.add("is-in"));
+    showHubStatic(lines, rest);
     return true;
   }
 
-  if (prefersReducedMotion()) {
-    lines.forEach((el) => el.classList.add("is-done"));
-    rest.forEach((el) => el.classList.add("is-in"));
+  if (!playIntro || prefersReducedMotion()) {
+    showHubStatic(lines, rest);
     return true;
   }
 
+  rest.forEach((el) => el.classList.add("reveal"));
   document.body.classList.add("page-enter");
 
   // Capture + clear immediately so line 2 stays empty until line 1 finishes.

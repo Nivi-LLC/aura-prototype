@@ -1,6 +1,7 @@
 /* Lightweight client-side gate for stakeholder demo. Not real security. */
 (function () {
   var KEY = "nivi_prototype_unlocked";
+  var INTRO_KEY = "nivi_hub_intro_pending";
   var PASS = "9999";
 
   function cssPath() {
@@ -12,6 +13,8 @@
   function unlock() {
     try {
       sessionStorage.setItem(KEY, "1");
+      // Play hub typewriter once after passport unlock, not on later visits.
+      sessionStorage.setItem(INTRO_KEY, "1");
     } catch (e) {}
   }
 
