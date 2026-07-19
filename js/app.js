@@ -1,4 +1,4 @@
-/* Lightweight prototype interactions — no backend */
+/* Lightweight prototype interactions — liquid glass + fluid motion */
 
 function showToast(message) {
   let el = document.querySelector(".toast");
@@ -19,6 +19,52 @@ document.addEventListener("click", (e) => {
   e.preventDefault();
   showToast(btn.getAttribute("data-toast") || "Action recorded (prototype)");
 });
+
+function prefersReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function setupReveals() {
+  if (prefersReducedMotion()) return;
+
+  document.body.classList.add("page-enter");
+
+  const targets = document.querySelectorAll(
+    ".card, .decision-card, .screen-tile, .journey span, .note, .grid > .stack"
+  );
+  targets.forEach((el, i) => {
+    el.classList.add("reveal");
+    el.style.setProperty("--reveal-delay", `${Math.min(i * 45, 360)}ms`);
+  });
+
+  if (!("IntersectionObserver" in window)) {
+    targets.forEach((el) => el.classList.add("is-in"));
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        io.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  targets.forEach((el) => io.observe(el));
+}
+
+function setupIntelChips() {
+  document.querySelectorAll(".pill.pill-ok, .pill.pill-accent").forEach((pill) => {
+    const t = (pill.textContent || "").trim().toLowerCase();
+    if (t === "live" || t === "aura auto" || t === "ai owned" || t === "ai operated") {
+      pill.classList.add("intel-chip");
+      pill.classList.remove("pill-ok", "pill-accent");
+    }
+  });
+}
 
 function setupMobileNav() {
   const sidebar = document.querySelector(".sidebar");
@@ -98,4 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const year = document.querySelector("[data-year]");
   if (year) year.textContent = String(new Date().getFullYear());
   setupMobileNav();
+  setupIntelChips();
+  setupReveals();
 });
