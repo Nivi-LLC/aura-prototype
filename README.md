@@ -47,6 +47,7 @@ No Approve & send, no manager review queue, no knowledge/inventory/booking human
 | `screens/visit-feedback.html` | **Human** · feedback → NIVI |
 | `screens/buyer-journey.html` | Meera journey · auto vs field badges |
 | `screens/executive.html` | Executive revenue brief (readout) |
+| `screens/ask-nivi.html` | ChatGPT-style demo copilot (scripted replies) |
 
 ## Important disclaimers
 
