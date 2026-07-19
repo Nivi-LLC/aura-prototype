@@ -864,6 +864,14 @@ img {
   content: "";
 }
 
+.journey span.human-step {
+  background: var(--accent-soft);
+  color: var(--brown);
+  font-weight: 600;
+  box-shadow: none;
+  outline: 1px solid rgba(156, 178, 165, 0.55);
+}
+
 .screen-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

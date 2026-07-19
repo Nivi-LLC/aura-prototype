@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AURA — Product Prototype (Stakeholder Demo)</title>
+  <title>AURA — Phase 1 AI Revenue OS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -14,15 +14,15 @@
 <div class="hub-inner">
     <header class="hub-hero">
       <p class="eyebrow">AURA · AI Revenue Operating System</p>
-      <h1>Phase 1 product prototype</h1>
+      <h1>Phase 1 — fully AI-automated</h1>
       <p>
-        Three demo lanes: <strong>A</strong> Phase 1 governed, <strong>B</strong> Autopilot field vision,
-        and <strong>C</strong> Marketing campaigns (multi-channel ads + AURA nurture) — C is not in the blueprint.
+        AURA runs the revenue OS end-to-end: triage, fit, WhatsApp, campaigns, nurture, inventory,
+        knowledge, and booking. Humans only show the site and submit visit feedback.
       </p>
       <div class="btn-row">
-        <a class="btn btn-primary" href="#phase1">Lane A · Governed</a>
-        <a class="btn btn-secondary" href="#autopilot">Lane B · Autopilot</a>
-        <a class="btn btn-outline" href="#marketing">Lane C · Marketing</a>
+        <a class="btn btn-primary" href="screens/aura-brain.html">Open AURA Brain</a>
+        <a class="btn btn-secondary" href="screens/field-agent.html">Field Agent</a>
+        <a class="btn btn-outline" href="screens/buyer-journey.html">Buyer Journey</a>
       </div>
     </header>
 
@@ -32,180 +32,93 @@
       <span>Intent</span>
       <span>Unit Fit</span>
       <span>Conversation</span>
-      <span>Site Visit</span>
+      <span class="human-step">Site Visit · Human</span>
       <span>Booking Readiness</span>
       <span>Outcome</span>
       <span>Learn</span>
     </div>
 
-    <section id="phase1" style="margin-bottom:48px">
-      <h2 class="section-title">Lane A — Phase 1 Governed</h2>
-      <p style="font-size:14px;color:var(--grey);margin:-4px 0 16px;max-width:640px">
-        Human-approved outbound, Decision Cards, role workspaces. Matches the blueprint release ladder
-        (shadow → agent-approved WhatsApp → limited automation later).
-      </p>
-      <div class="btn-row" style="margin-bottom:16px">
-        <a class="btn btn-primary" href="screens/agent-today.html">Start as Sales Agent</a>
-        <a class="btn btn-outline" href="screens/executive.html">Executive Brief</a>
-        <a class="btn btn-outline" href="screens/manager.html">Manager Command Center</a>
-      </div>
-      <div class="screen-grid">
-        <a class="screen-tile" href="screens/agent-today.html">
-          <div class="num">01</div>
-          <h3>Agent Today</h3>
-          <p>One primary Decision Card. Next action, evidence, confidence, approve/reject.</p>
-          <div class="role-tag">Sales Agent · DPT-0001 / 0005</div>
-        </a>
-        <a class="screen-tile" href="screens/buyer-360.html">
-          <div class="num">02</div>
-          <h3>Buyer 360</h3>
-          <p>Household, intent, unit fit — facts vs AI observations separated.</p>
-          <div class="role-tag">Sales Agent · DPT-0002</div>
-        </a>
-        <a class="screen-tile" href="screens/whatsapp.html">
-          <div class="num">03</div>
-          <h3>WhatsApp Workspace</h3>
-          <p>Agent-approved outbound drafts. Shadow → human review before send.</p>
-          <div class="role-tag">Sales Agent · DPT-0003</div>
-        </a>
-        <a class="screen-tile" href="screens/pipeline.html">
-          <div class="num">04</div>
-          <h3>Lead Pipeline</h3>
-          <p>Priority queue with freshness and coverage — not a vanity funnel.</p>
-          <div class="role-tag">Sales Agent / Manager</div>
-        </a>
-        <a class="screen-tile" href="screens/visits.html">
-          <div class="num">05</div>
-          <h3>Site Visit Outcome</h3>
-          <p>Check-in, units shown, objections, next action with evidence.</p>
-          <div class="role-tag">Sales Agent · DPT-0005</div>
-        </a>
-        <a class="screen-tile" href="screens/manager.html">
-          <div class="num">06</div>
-          <h3>Manager Command Center</h3>
-          <p>Review-required queue, SLA risk, approve / reject / delegate.</p>
-          <div class="role-tag">Sales Manager · DPT-0006</div>
-        </a>
-        <a class="screen-tile" href="screens/inventory.html">
-          <div class="num">07</div>
-          <h3>Inventory Stewardship</h3>
-          <p>Price-list versioning, availability freshness, conflict flags.</p>
-          <div class="role-tag">Project / Inventory Steward</div>
-        </a>
-        <a class="screen-tile" href="screens/knowledge.html">
-          <div class="num">08</div>
-          <h3>Knowledge Approver</h3>
-          <p>Approve, expire, supersede knowledge used in conversation drafts.</p>
-          <div class="role-tag">Knowledge Approver</div>
-        </a>
-        <a class="screen-tile" href="screens/booking.html">
-          <div class="num">09</div>
-          <h3>Booking &amp; Evidence</h3>
-          <p>Terminal outcomes with lineage — booking, loss, cancellation.</p>
-          <div class="role-tag">Booking / Finance Authority</div>
-        </a>
-        <a class="screen-tile" href="screens/executive.html">
-          <div class="num">10</div>
-          <h3>Executive Revenue Brief</h3>
-          <p>Pipeline coverage, readiness bands, opportunity range, interventions.</p>
-          <div class="role-tag">Executive Sponsor · DPT-0007 / 0008</div>
-        </a>
-      </div>
-    </section>
-
-    <section id="autopilot">
-      <div class="vision-banner">
-        <strong>GATED VISION — NOT PHASE 1</strong>
-        Autopilot messaging requires Release 7+ evidence and a future Decision Record superseding agent-approved outbound (DEC-0003).
-        Blueprint still forbids treating AURA as an unchecked autonomous salesperson. Authority roles and kill switches remain.
-      </div>
-      <h2 class="section-title" style="margin-top:20px">Lane B — Autopilot Vision</h2>
+    <section id="screens" style="margin-bottom:48px">
+      <h2 class="section-title">Phase 1 screens</h2>
       <p style="font-size:14px;color:var(--grey);margin:-4px 0 16px;max-width:720px">
-        <strong>AURA runs the revenue brain.</strong> Agents become field operators: show the site, submit feedback.
-        Exceptions, inventory/price, knowledge, and booking authority stay human.
+        One product story. AURA owns every step except field site show and post-visit feedback.
       </p>
-      <div class="btn-row" style="margin-bottom:16px">
-        <a class="btn btn-primary" href="screens/aura-brain.html">Open AURA Brain</a>
-        <a class="btn btn-outline" href="screens/field-agent.html">Field Agent Today</a>
-        <a class="btn btn-outline" href="screens/exception-inbox.html">Exception Inbox</a>
-      </div>
       <div class="screen-grid">
         <a class="screen-tile" href="screens/aura-brain.html">
-          <div class="num">B1</div>
-          <h3>AURA Brain Console</h3>
-          <p>Overnight autonomous actions: triage, fit, drafts, visit proposals, kill-switch status.</p>
-          <div class="role-tag">Lane B · Autopilot</div>
+          <div class="num">01</div>
+          <h3>AURA Brain</h3>
+          <p>Live auto actions: triage, fit, WhatsApp sent, visits booked, inventory &amp; booking synced.</p>
+          <div class="role-tag">AURA · Primary console</div>
         </a>
-        <a class="screen-tile" href="screens/field-agent.html">
-          <div class="num">B2</div>
-          <h3>Field Agent Today</h3>
-          <p>Only visits to show + buyer brief. No pipeline or draft chrome.</p>
-          <div class="role-tag">Lane B · Field only</div>
+        <a class="screen-tile" href="screens/pipeline.html">
+          <div class="num">02</div>
+          <h3>Pipeline</h3>
+          <p>AI priority queue — next actions already executing, not waiting on approval.</p>
+          <div class="role-tag">AURA · DPT-0001</div>
         </a>
-        <a class="screen-tile" href="screens/visit-feedback.html">
-          <div class="num">B3</div>
-          <h3>Visit Feedback → AURA</h3>
-          <p>Units shown, reaction, objections — AURA decides the next action.</p>
-          <div class="role-tag">Lane B · Field only</div>
+        <a class="screen-tile" href="screens/buyer-360.html">
+          <div class="num">03</div>
+          <h3>Buyer 360</h3>
+          <p>Household, intent, unit fit — facts vs AI observations; AURA drives next step.</p>
+          <div class="role-tag">AURA · DPT-0002</div>
         </a>
-        <a class="screen-tile" href="screens/exception-inbox.html">
-          <div class="num">B4</div>
-          <h3>Exception Inbox</h3>
-          <p>Only what AURA cannot do: consent, inventory conflict, low confidence, policy block.</p>
-          <div class="role-tag">Lane B · Steward / Manager</div>
+        <a class="screen-tile" href="screens/whatsapp.html">
+          <div class="num">04</div>
+          <h3>WhatsApp</h3>
+          <p>Auto-sent conversation log. No approve &amp; send gate.</p>
+          <div class="role-tag">AURA · Auto-send</div>
         </a>
-        <a class="screen-tile" href="screens/autopilot-timeline.html">
-          <div class="num">B5</div>
-          <h3>Autopilot Timeline</h3>
-          <p>Buyer journey as AURA-executed events with fact / observation / auto-action badges.</p>
-          <div class="role-tag">Lane B · Meera Shah journey</div>
-        </a>
-      </div>
-    </section>
-
-    <section id="marketing" style="margin-top:48px">
-      <div class="vision-banner">
-        <strong>LANE C — MARKETING VISION · NOT IN PHASE 1 BLUEPRINT</strong>
-        Multi-channel ads (WhatsApp, Meta/FB/IG, calls, Way2News), funnel tracking, and AURA nurture with advisory value/rental forecasts.
-        Separate from Lane B Autopilot. Auto outbound still needs consent, policy, and kill switches.
-      </div>
-      <h2 class="section-title" style="margin-top:20px">Lane C — Marketing Campaigns</h2>
-      <p style="font-size:14px;color:var(--grey);margin:-4px 0 16px;max-width:720px">
-        Manage campaigns, attribute opens/clicks/forms, then hand off to AURA to follow up, explain project value,
-        share advisory appreciation/rental bands, and schedule visits. Field agents still show the site.
-      </p>
-      <div class="btn-row" style="margin-bottom:16px">
-        <a class="btn btn-primary" href="screens/marketing-campaigns.html">Open Campaigns</a>
-        <a class="btn btn-secondary" href="screens/marketing-funnel.html">Funnel</a>
-        <a class="btn btn-outline" href="screens/marketing-nurture.html">AURA Nurture</a>
-      </div>
-      <div class="screen-grid">
         <a class="screen-tile" href="screens/marketing-campaigns.html">
-          <div class="num">C1</div>
-          <h3>Marketing Campaigns</h3>
-          <p>WhatsApp, Meta/FB/IG, calls, Way2News — budgets, creatives, outbound kill switch.</p>
-          <div class="role-tag">Lane C · Not in blueprint</div>
+          <div class="num">05</div>
+          <h3>Campaigns</h3>
+          <p>Multi-channel ads running under AURA — WhatsApp, Meta, calls, Way2News.</p>
+          <div class="role-tag">AURA · Marketing</div>
         </a>
         <a class="screen-tile" href="screens/marketing-funnel.html">
-          <div class="num">C2</div>
-          <h3>Campaign Funnel</h3>
-          <p>Open → click → form → AURA handoff. Hot prospects from ads.</p>
-          <div class="role-tag">Lane C · Attribution</div>
+          <div class="num">06</div>
+          <h3>Funnel</h3>
+          <p>Open → click → form → AURA handoff with attribution.</p>
+          <div class="role-tag">AURA · Attribution</div>
         </a>
         <a class="screen-tile" href="screens/marketing-nurture.html">
-          <div class="num">C3</div>
-          <h3>AURA Nurture Agent</h3>
-          <p>Follow-up, learn, explain value/rental forecasts, schedule visits.</p>
-          <div class="role-tag">Lane C · AI nurture</div>
+          <div class="num">07</div>
+          <h3>AURA Nurture</h3>
+          <p>Follow-up, advisory value/rental bands, visit scheduling — fully live.</p>
+          <div class="role-tag">AURA · Nurture</div>
+        </a>
+        <a class="screen-tile" href="screens/field-agent.html">
+          <div class="num">08</div>
+          <h3>Field Agent</h3>
+          <p>Human-only: visit queue + AURA brief. Show the site.</p>
+          <div class="role-tag">Human · Field</div>
+        </a>
+        <a class="screen-tile" href="screens/visit-feedback.html">
+          <div class="num">09</div>
+          <h3>Visit Feedback</h3>
+          <p>Human-only: units shown, reaction, objections — then AURA resumes.</p>
+          <div class="role-tag">Human · Field</div>
+        </a>
+        <a class="screen-tile" href="screens/buyer-journey.html">
+          <div class="num">10</div>
+          <h3>Buyer Journey</h3>
+          <p>Meera Shah end-to-end with auto vs field badges.</p>
+          <div class="role-tag">Story · Timeline</div>
+        </a>
+        <a class="screen-tile" href="screens/executive.html">
+          <div class="num">11</div>
+          <h3>Executive Brief</h3>
+          <p>Revenue opportunity, readiness, coverage — AURA-operated readout.</p>
+          <div class="role-tag">AURA · DPT-0007 / 0008</div>
         </a>
       </div>
     </section>
 
     <div class="note">
-      <strong>For builders:</strong> Lane A ≈ Phase 1 contracts. Lane B = Autopilot field vision (gated). Lane C = Marketing ads OS (not in blueprint).
-      See <a href="VISION-AUTOPILOT.md" style="color:var(--accent-deep)">VISION-AUTOPILOT.md</a>.
+      <strong>Stakeholder one-liner:</strong> AURA runs the full revenue OS; humans only show the site and submit visit feedback.
       <br /><br />
-      <strong>Stakeholder one-liner:</strong> AURA runs the revenue brain; agents run the site visit; authority roles and exceptions stay human; full hands-off messaging is a gated later release, not launch.
+      <strong>For builders:</strong> This prototype frames Phase 1 as full automation for stakeholder demos.
+      It diverges from product-specs release ladder / DEC-0003 (human-approved outbound). See
+      <a href="VISION.md" style="color:var(--accent-deep)">VISION.md</a>.
       <br /><br />
       <strong>Figma source:</strong> Finance Dashboard UI Kit by Paperpillar (Community) —
       tokens Custom <code>#9CB2A5</code>, Black <code>#121212</code>, Grey <code>#737B8B</code>,

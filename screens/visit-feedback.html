@@ -15,7 +15,7 @@
     <aside class="sidebar">
       <div class="sidebar-brand">
         <div class="logo">AURA</div>
-        <div class="tag">Lane B · Autopilot Vision</div>
+        <div class="tag">Phase 1 · AI Revenue OS</div>
       </div>
       <div class="profile">
         <div class="avatar">AR</div>
@@ -25,36 +25,42 @@
         </div>
       </div>
       <div class="nav-group">
-                        <p class="nav-label">Vision</p>
+        <p class="nav-label">AURA</p>
           <a class="nav-link" href="aura-brain.html"><span class="ico">◈</span>Brain</a>
-          <a class="nav-link" href="field-agent.html"><span class="ico">◫</span>Field</a>
-          <a class="nav-link active" href="visit-feedback.html"><span class="ico">✎</span>Feedback</a>
-          <a class="nav-link" href="exception-inbox.html"><span class="ico">⚠</span>Exceptions</a>
-          <a class="nav-link" href="autopilot-timeline.html"><span class="ico">◷</span>Timeline</a>
+          <a class="nav-link" href="pipeline.html"><span class="ico">☰</span>Pipeline</a>
+          <a class="nav-link" href="buyer-360.html"><span class="ico">◎</span>Buyers</a>
+          <a class="nav-link" href="whatsapp.html"><span class="ico">💬</span>Messages</a>
+          <a class="nav-link" href="marketing-campaigns.html"><span class="ico">▦</span>Campaigns</a>
+          <a class="nav-link" href="marketing-funnel.html"><span class="ico">↯</span>Funnel</a>
+          <a class="nav-link" href="marketing-nurture.html"><span class="ico">🤖</span>Nurture</a>
+          <a class="nav-link" href="buyer-journey.html"><span class="ico">◷</span>Journey</a>
+          <a class="nav-link" href="executive.html"><span class="ico">◈</span>Executive</a>
       </div>
       <div class="nav-group">
-        <p class="nav-label">Compare</p>
-        <a class="nav-link" href="agent-today.html"><span class="ico">←</span>Phase 1 Governed</a>
-        <a class="nav-link" href="marketing-campaigns.html"><span class="ico">📣</span>Lane C Marketing</a>
-        <a class="nav-link" href="../index.html"><span class="ico">⌂</span>Prototype Hub</a>
+        <p class="nav-label">Field</p>
+          <a class="nav-link" href="field-agent.html"><span class="ico">◫</span>Today</a>
+          <a class="nav-link active" href="visit-feedback.html"><span class="ico">✎</span>Feedback</a>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Exit</p>
+        <a class="nav-link" href="../index.html"><span class="ico">⌂</span>Hub</a>
       </div>
     </aside>
     <main class="main">
+
       <div class="topbar">
         <div>
           <h1>Visit Feedback</h1>
           <p class="sub">Meera Shah · Unit 4B · Submit once — AURA creates the next action</p>
         </div>
         <div style="display:flex;align-items:center;gap:12px">
-          <span class="pill pill-accent">Vision lane</span>
-          <button class="icon-btn" type="button" aria-label="Notifications"><span>🔔</span></button>
+          <span class="pill pill-accent">Human · Field</span>
         </div>
       </div>
-      
       <div class="grid grid-13">
         <div class="card feedback-form">
           <div class="card-head">
-            <div><h2>Post-visit feedback to AURA</h2><div class="meta">Required evidence · not a silent checkbox</div></div>
+            <div><h2>Post-visit feedback to AURA</h2><div class="meta">Required evidence · only human gate in Phase 1</div></div>
             <span class="pill pill-ok">Checked in</span>
           </div>
           <label>Units shown</label>
@@ -81,7 +87,7 @@
           <label>Shortlisted units</label>
           <input type="text" value="4B (primary), 5A (backup)" />
           <label>Agent notes for AURA</label>
-          <textarea rows="4">Liked east view. Husband concerned about visitor parking. Asked about payment plan — directed to approved FAQ only.</textarea>
+          <textarea rows="4">Liked east view. Husband concerned about visitor parking. Asked about payment plan — shared approved FAQ only.</textarea>
           <div class="btn-row">
             <button class="btn btn-primary" data-toast="Feedback received — AURA will set next action (prototype)">Submit to AURA</button>
             <button class="btn btn-outline" data-toast="Saved draft feedback (prototype)">Save draft</button>
@@ -91,8 +97,8 @@
           <div class="card accent">
             <div class="card-head"><div><h2>After you submit</h2><div class="meta">AURA owns next step</div></div></div>
             <p style="margin:0;font-size:13px;line-height:1.55;opacity:.95">
-              AURA will update intent, recompute fit/readiness, draft or auto-schedule follow-up (policy permitting),
-              and only escalate if confidence, consent, or inventory blocks execution.
+              AURA updates intent, recomputes fit/readiness, auto-sends follow-up WhatsApp,
+              and registers booking readiness — no manager or agent approval.
             </p>
             <div class="btn-row" style="margin-top:16px">
               <a class="btn btn-white" href="aura-brain.html">Watch Brain console</a>
@@ -102,8 +108,8 @@
             <div class="card-head"><div><h2>Capture checklist</h2></div></div>
             <div class="list">
               <div class="list-row"><div><div class="title">Participants</div><div class="desc">Meera + Rohan</div></div><span class="pill pill-ok">Set</span></div>
-              <div class="list-row"><div><div class="title">Attendance evidence</div><div class="desc">Check-in GPS / host confirm</div></div><span class="pill pill-ok">Set</span></div>
-              <div class="list-row"><div><div class="title">Next action</div><div class="desc">Created by AURA — not agent-chosen</div></div><span class="pill pill-accent">AURA</span></div>
+              <div class="list-row"><div><div class="title">Attendance evidence</div><div class="desc">Check-in confirm</div></div><span class="pill pill-ok">Set</span></div>
+              <div class="list-row"><div><div class="title">Next action</div><div class="desc">Created by AURA</div></div><span class="pill pill-accent">AURA</span></div>
             </div>
           </div>
         </div>
@@ -113,10 +119,10 @@
           el.addEventListener("click", function () { el.classList.toggle("selected"); });
         });
       </script>
-    
+
     </main>
   </div>
-      <nav class="mobile-nav"><a class="" href="aura-brain.html"><span>◈</span>Brain</a><a class="" href="field-agent.html"><span>◫</span>Field</a><a class="active" href="visit-feedback.html"><span>✎</span>Feedback</a><a class="" href="exception-inbox.html"><span>⚠</span>Exceptions</a><a class="" href="autopilot-timeline.html"><span>◷</span>Timeline</a></nav>
+  <nav class="mobile-nav"><a href="aura-brain.html"><span>◈</span>Brain</a><a href="field-agent.html"><span>◫</span>Field</a><a class="active" href="visit-feedback.html"><span>✎</span>Feedback</a><a href="whatsapp.html"><span>💬</span>Msgs</a><a href="pipeline.html"><span>☰</span>More</a></nav>
   <script src="../js/app.js"></script>
 </body>
 </html>
