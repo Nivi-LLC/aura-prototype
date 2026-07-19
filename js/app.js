@@ -1,4 +1,4 @@
-/* Lightweight prototype interactions — liquid glass + fluid motion */
+/* Lightweight prototype interactions — liquid glass + fluid holographic bg */
 
 function showToast(message) {
   let el = document.querySelector(".toast");
@@ -30,49 +30,45 @@ function assetPath(file) {
     : `assets/${file}`;
 }
 
-function setupBgVideo() {
-  if (prefersReducedMotion()) return;
-  if (document.querySelector(".bg-video")) return;
+async function setupHoloBackground() {
+  if (document.querySelector(".bg-holo")) return;
 
-  const video = document.createElement("video");
-  video.className = "bg-video";
-  video.setAttribute("aria-hidden", "true");
-  video.muted = true;
-  video.defaultMuted = true;
-  video.loop = true;
-  video.autoplay = true;
-  video.playsInline = true;
-  video.setAttribute("playsinline", "");
-  video.setAttribute("webkit-playsinline", "");
-  video.preload = "auto";
-  video.poster = assetPath("holographic-gradient-06.png");
-  video.src = assetPath("bg-loop.mp4");
-
-  const fallback = document.createElement("div");
-  fallback.className = "bg-holo-fallback";
-  fallback.setAttribute("aria-hidden", "true");
+  const root = document.createElement("div");
+  root.className = "bg-holo";
+  root.setAttribute("aria-hidden", "true");
 
   const scrim = document.createElement("div");
   scrim.className = "bg-video-scrim";
   scrim.setAttribute("aria-hidden", "true");
 
   document.body.prepend(scrim);
-  document.body.prepend(video);
-  document.body.prepend(fallback);
+  document.body.prepend(root);
   document.body.classList.add("has-bg-video");
 
-  const markReady = () => video.classList.add("is-ready");
-  video.addEventListener("loadeddata", markReady, { once: true });
-  video.addEventListener("canplay", markReady, { once: true });
+  // Static poster while SVG loads / for reduced motion
+  root.style.backgroundImage = `url("${assetPath("holographic-gradient-06.png")}")`;
+  root.style.backgroundSize = "cover";
+  root.style.backgroundPosition = "center";
 
-  const play = () => {
-    const p = video.play();
-    if (p && typeof p.catch === "function") p.catch(() => {});
-  };
-  play();
-  document.addEventListener("visibilitychange", () => {
-    if (!document.hidden) play();
-  });
+  if (prefersReducedMotion()) return;
+
+  try {
+    const res = await fetch(assetPath("holographic-gradient-06-fluid.svg"), {
+      cache: "force-cache",
+    });
+    if (!res.ok) throw new Error("svg fetch failed");
+    const svg = await res.text();
+    root.innerHTML = svg;
+    root.classList.add("is-fluid");
+    const svgEl = root.querySelector("svg");
+    if (svgEl) {
+      svgEl.setAttribute("class", "bg-holo-svg");
+      svgEl.setAttribute("preserveAspectRatio", "xMidYMid slice");
+    }
+  } catch (err) {
+    // Keep PNG + slow CSS drift if SVG cannot load
+    root.classList.add("is-fallback");
+  }
 }
 
 function setupReveals() {
@@ -194,7 +190,7 @@ function setupMobileNav() {
 document.addEventListener("DOMContentLoaded", () => {
   const year = document.querySelector("[data-year]");
   if (year) year.textContent = String(new Date().getFullYear());
-  setupBgVideo();
+  setupHoloBackground();
   setupMobileNav();
   setupIntelChips();
   setupReveals();

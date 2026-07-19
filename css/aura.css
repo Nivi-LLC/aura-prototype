@@ -77,33 +77,31 @@ body {
   background-attachment: fixed;
 }
 
-/* Full-bleed holographic background (Figma Light Gradient 06) */
-.bg-holo-fallback {
+/* Full-bleed holographic background (Figma Light Gradient 06 — fluid objects) */
+.bg-holo {
   position: fixed;
   inset: 0;
-  z-index: -4;
+  z-index: -3;
   pointer-events: none;
-  background:
-    url("../assets/holographic-gradient-06.png") center / cover no-repeat;
-  transform: scale(1.06);
-  animation: aura-holo-drift 28s var(--ease-fluid) infinite alternate;
+  overflow: hidden;
+  background: #fff center / cover no-repeat;
 }
 
-.bg-video {
-  position: fixed;
+.bg-holo-svg {
+  position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -3;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 1.2s var(--ease-out);
-  transform: scale(1.04);
+  display: block;
 }
 
-.bg-video.is-ready {
-  opacity: 1;
+.bg-holo.is-fluid {
+  background-image: none;
+}
+
+.bg-holo.is-fallback {
+  transform: scale(1.06);
+  animation: aura-holo-drift 28s var(--ease-fluid) infinite alternate;
 }
 
 @keyframes aura-holo-drift {
@@ -153,11 +151,7 @@ body::before {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bg-video {
-    display: none !important;
-  }
-
-  .bg-holo-fallback {
+  .bg-holo.is-fallback {
     animation: none;
     transform: scale(1.06);
   }

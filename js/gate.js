@@ -35,12 +35,9 @@
       var base =
         location.pathname.indexOf("/screens/") !== -1 ? "../assets/" : "assets/";
       document.body.innerHTML =
-        '<div class="bg-holo-fallback" aria-hidden="true"></div>' +
-        '<video class="bg-video is-ready" aria-hidden="true" muted loop autoplay playsinline webkit-playsinline preload="auto" poster="' +
+        '<div class="bg-holo" aria-hidden="true" style="background-image:url(' +
         base +
-        "holographic-gradient-06.png\" src=\"" +
-        base +
-        'bg-loop.mp4"></video>' +
+        'holographic-gradient-06.png)"></div>' +
         '<div class="bg-video-scrim" aria-hidden="true"></div>' +
         '<div class="gate">' +
         '<form class="gate-card" id="aura-gate-form" autocomplete="off">' +
@@ -53,11 +50,21 @@
         '<p class="gate-note">Stakeholder demo · synthetic data only</p>' +
         "</form></div>";
       document.body.classList.add("has-bg-video");
-      var vid = document.querySelector(".bg-video");
-      if (vid && vid.play) {
-        var p = vid.play();
-        if (p && p.catch) p.catch(function () {});
-      }
+      // Hydrate fluid SVG blobs (peach / pink / sky / blue core)
+      fetch(base + "holographic-gradient-06-fluid.svg")
+        .then(function (r) {
+          return r.ok ? r.text() : Promise.reject();
+        })
+        .then(function (svg) {
+          var holo = document.querySelector(".bg-holo");
+          if (!holo) return;
+          holo.innerHTML = svg;
+          holo.classList.add("is-fluid");
+          holo.style.backgroundImage = "none";
+          var el = holo.querySelector("svg");
+          if (el) el.setAttribute("class", "bg-holo-svg");
+        })
+        .catch(function () {});
 
       var form = document.getElementById("aura-gate-form");
       var input = document.getElementById("aura-gate-pass");

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" overflow="hidden">
+  <!-- Figma: Light Gradient 06  fluid object animation -->
+  <defs>
+    <style>
+      .holo-stage { transform-origin: 720px 450px; }
+      .blob { transform-box: fill-box; transform-origin: center; will-change: transform; }
+      .blob-peach {
+        animation: float-peach 18s ease-in-out infinite;
+      }
+      .blob-pink {
+        animation: float-pink 22s ease-in-out infinite;
+      }
+      .blob-sky {
+        animation: float-sky 26s ease-in-out infinite;
+      }
+      .blob-core {
+        animation: float-core 14s ease-in-out infinite;
+      }
+      @keyframes float-peach {
+        0%   { transform: translate(-40px, 20px) scale(1) rotate(0deg); }
+        33%  { transform: translate(60px, -50px) scale(1.08) rotate(4deg); }
+        66%  { transform: translate(-20px, 40px) scale(0.96) rotate(-3deg); }
+        100% { transform: translate(-40px, 20px) scale(1) rotate(0deg); }
+      }
+      @keyframes float-pink {
+        0%   { transform: translate(30px, -20px) scale(1.02); }
+        40%  { transform: translate(-70px, 45px) scale(1.12); }
+        70%  { transform: translate(40px, 10px) scale(0.94); }
+        100% { transform: translate(30px, -20px) scale(1.02); }
+      }
+      @keyframes float-sky {
+        0%   { transform: translate(0, 0) scale(1); }
+        50%  { transform: translate(-80px, 60px) scale(1.15); }
+        100% { transform: translate(0, 0) scale(1); }
+      }
+      @keyframes float-core {
+        0%   { transform: translate(0, 0) scale(1); }
+        25%  { transform: translate(-50px, -40px) scale(1.25); }
+        50%  { transform: translate(30px, 50px) scale(0.9); }
+        75%  { transform: translate(60px, -20px) scale(1.15); }
+        100% { transform: translate(0, 0) scale(1); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .blob { animation: none !important; }
+      }
+    </style>
+    <filter id="blur200" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="200" result="b"/>
+      <feBlend in="b" in2="SourceGraphic" mode="normal"/>
+    </filter>
+    <filter id="blurPink" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="200"/>
+    </filter>
+    <filter id="blurPeach" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="200"/>
+    </filter>
+    <filter id="blurSky" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="200"/>
+    </filter>
+    <filter id="blurCore" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="150"/>
+    </filter>
+    <linearGradient id="skyGrad" x1="1351.5" y1="-41" x2="1351.5" y2="942" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8BB5FF"/>
+      <stop offset="1" stop-color="#E1FBFF"/>
+    </linearGradient>
+    <clipPath id="frame">
+      <rect width="1440" height="900"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#frame)" class="holo-stage">
+    <rect width="1440" height="900" fill="#FFFFFF"/>
+    <!-- Peach mass (Vector 6) -->
+    <g class="blob blob-peach" filter="url(#blurPeach)">
+      <path d="M788.544 14.0096C867.062 -76.9808 933.485 -223.543 931.534 -343.711C925.32 -726.375 75.226 -377.188 -106.519 -40.3809C-261.187 246.248 -415.972 817.336 -91.1599 841.331C114.822 856.547 338.328 789.573 426.861 602.966C479.407 492.211 458.456 309.931 532.058 211.898C589.633 135.213 725.896 86.6096 788.544 14.0096Z" fill="#FFDEDA"/>
+    </g>
+    <!-- Pink mass (Ellipse 10) -->
+    <g class="blob blob-pink" filter="url(#blurPink)">
+      <path d="M756.5 736C899.266 736 934.5 508.489 934.5 366C934.5 223.511 1274.81 137.07 1077.5 45.5C985.93 3.00308 915.025 14.3526 819 45.5C590.894 119.49 498 335.51 498 478C498 620.489 613.734 736 756.5 736Z" fill="#FF90EA"/>
+    </g>
+    <!-- Soft sky wash (Ellipse 9) -->
+    <g class="blob blob-sky" filter="url(#blurSky)">
+      <circle cx="1351.5" cy="450.5" r="491.5" fill="url(#skyGrad)"/>
+    </g>
+    <!-- Bright blue core (Ellipse 11) -->
+    <g class="blob blob-core" filter="url(#blurCore)">
+      <circle cx="1083" cy="386" r="120" fill="#0094FF"/>
+    </g>
+  </g>
+</svg>
