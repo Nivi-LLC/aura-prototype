@@ -738,7 +738,8 @@ img {
     font-size: clamp(28px, 8vw, 40px);
   }
 
-  .hub-hero p {
+  .hub-hero p,
+  .hub-line {
     font-size: 15px;
   }
 
