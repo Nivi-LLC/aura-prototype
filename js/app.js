@@ -75,14 +75,14 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function typeLine(el, charsPerMs = 22) {
-  const text = (el.textContent || "").replace(/\s+/g, " ").trim();
+async function typeLine(el, text, charsPerMs = 22) {
+  const full = (text || el.textContent || "").replace(/\s+/g, " ").trim();
   el.textContent = "";
-  el.setAttribute("aria-label", text);
+  el.setAttribute("aria-label", full);
   el.classList.add("is-typing");
 
-  for (let i = 0; i < text.length; i++) {
-    el.textContent = text.slice(0, i + 1);
+  for (let i = 0; i < full.length; i++) {
+    el.textContent = full.slice(0, i + 1);
     await sleep(charsPerMs);
   }
 
@@ -116,9 +116,19 @@ function setupHubStoryReveal() {
 
   document.body.classList.add("page-enter");
 
+  // Capture + clear immediately so line 2 stays empty until line 1 finishes.
+  const lineTexts = lines.map((el) => {
+    const text = (el.textContent || "").replace(/\s+/g, " ").trim();
+    el.textContent = "";
+    el.classList.add("is-waiting");
+    return text;
+  });
+
   (async () => {
-    for (const line of lines) {
-      await typeLine(line);
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      line.classList.remove("is-waiting");
+      await typeLine(line, lineTexts[i]);
       await sleep(320);
     }
 

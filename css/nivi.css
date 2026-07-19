@@ -1288,6 +1288,10 @@ img {
   margin-top: 8px;
 }
 
+.hub-line.is-waiting {
+  visibility: hidden;
+}
+
 .hub-line.is-typing::after {
   content: "";
   display: inline-block;
